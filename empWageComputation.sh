@@ -1,27 +1,28 @@
 #! /bin/bash
 
 perHrWage=20
+fullTimeEmp=1
+partTimeEmp=2
 
-checkPartTimeEmp()
+checkDailyWageUsingCase()
 {
 	Random=$((RANDOM%3))
-	if [ $Random -eq 1 ]
-	then
-		echo "Employee is present for full day."
+	case $Random in
+	$fullTimeEmp )
 		empHr=8
-	elif [ $Random -eq 2 ]
-	then
-		echo "Employee is present for part time."
+		echo "Employee is present for full day.";;
+	$partTimeEmp )
 		empHr=4
-	else
-		echo "Employee is absent."
-	        empHr=0
-	fi
+		echo "Employee is present for part time.";;
+	* )
+		empHr=0
+		echo "Employee is absent.";;
+	esac
 }
 
 main()
 {
-	checkPartTimeEmp
+	checkDailyWageUsingCase
 }
 
 main
