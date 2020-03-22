@@ -2,9 +2,10 @@
 
 This Repo check Employee Wage.
 
-## Use Case 5 : Calculate Monthly Employee Wage Using Case
+## Use Case 6 : Calculate Monthly Employee Wage
 
-- Assume 20 Working Day per Month.
-- Assume Wage per Hour is 20.
-- Assume Full Day Hour is 8.
-- Assime Part Time Hour is 4.
+- Assume 100 working hour per month.
+- Assume 20 working day per month.
+- Assume wage per hour is 20.
+- Assume full day hour is 8.
+- Assime part time Hour is 4.
