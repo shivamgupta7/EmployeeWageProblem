@@ -1,20 +1,25 @@
 #! /bin/bash
 
-echo "Welcome to Employee Wage Computation Program."
+perHrWage=20
 
-checkEmpAttendance()
+calDailyEmpWage()
 {
 	if [ $((RANDOM%2)) -eq 1 ]
 	then
-		echo "Employee is present."
+		echo "Employee present"
+		empHr=8
 	else
-		echo "Employee is absent."
+		echo "Employee Absent"
+	        empHr=0
 	fi
 }
 
 main()
 {
-	checkEmpAttendance
+	calDailyEmpWage
 }
 
 main
+
+salary=$(( $perHrWage * $empHr ))
+echo "Employee daily salary is $salary"
