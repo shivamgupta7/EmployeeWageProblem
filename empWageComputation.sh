@@ -2,21 +2,26 @@
 
 perHrWage=20
 
-calDailyEmpWage()
+checkPartTimeEmp()
 {
-	if [ $((RANDOM%2)) -eq 1 ]
+	Random=$((RANDOM%3))
+	if [ $Random -eq 1 ]
 	then
-		echo "Employee present"
+		echo "Employee is present for full day."
 		empHr=8
+	elif [ $Random -eq 2 ]
+	then
+		echo "Employee is present for part time."
+		empHr=4
 	else
-		echo "Employee Absent"
+		echo "Employee is absent."
 	        empHr=0
 	fi
 }
 
 main()
 {
-	calDailyEmpWage
+	checkPartTimeEmp
 }
 
 main
