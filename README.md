@@ -2,7 +2,7 @@
 
 This Repo check Employee Wage.
 
-## Use Case 3 : Calculate Daily Employee Wage
+## Use Case 4 : Calculate Daily Employee Wage Using Case
 
 - Assume Wage per Hour is 20.
 - Assume Full Day Hour is 8.
