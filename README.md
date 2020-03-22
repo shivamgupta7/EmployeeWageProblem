@@ -2,6 +2,7 @@
 
 This Repo check Employee Wage.
 
-## Use Case 1 : Check employee attendance
+## Use Case 2 : Calculate Daily Employee Wage
 
-- Using ((RANDOM)) for Attendance Check.
+- Assume Wage per Hour is 20.
+- Assume Full Day Hour is 8.
