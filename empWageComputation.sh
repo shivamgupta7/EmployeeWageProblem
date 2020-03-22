@@ -1,17 +1,15 @@
 #! /bin/bash -x
 
-perHrWage=20
 fullTimeEmp=1
 partTimeEmp=2
 daysPerMonth=20
-totalSalary=0
 totalHr=0
-maximumHr=100
+maximumHr=101
 days=0
 
-calEmpMonthlyWage()
+calEmpWorkHour()
 {
-        while [ $totalHr -le $maximumHr -a $days -le $daysPerMonth ]
+        while [ $totalHr -lt $maximumHr -a $days -le $daysPerMonth ]
         do
                 random=$((RANDOM%3))
                 case $random in
@@ -25,9 +23,6 @@ calEmpMonthlyWage()
                         empHr=0 ;;
                 esac
 
-                salary=$(( $perHrWage * $empHr ))
-                echo "Employee daily salary is $salary "
-                totalSalary=$(( $salary + $totalSalary ))
                 totalHr=$(( $totalHr + $empHr ))
                 ((++days))
         done
@@ -35,8 +30,8 @@ calEmpMonthlyWage()
 
 main()
 {
-        calEmpMonthlyWage
+        calEmpWorkHour
 }
 
 main
-echo "Employee total Salary Per Month is $totalSalary"
+echo "Employee total working hour per month is $totalHr"
