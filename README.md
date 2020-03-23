@@ -2,7 +2,7 @@
 
 This Repo check Employee Wage.
 
-## Use Case 6 : Calculate Monthly Employee Working Hour
+## Use Case 8 : Calculate employee daily wage along with total wage
 
 - Assume 100 working hour per month.
 - Assume 20 working day per month.
