@@ -7,12 +7,12 @@ daysPerMonth=20
 totalSalary=0
 totalHr=0
 maximumHr=100
-days=1
-declare -a arrayForWage
+day=1
+declare -A arrayForWage
 
 calDailyAndTotalWage()
 {
-        while [ $totalHr -le $maximumHr -a $days -le $daysPerMonth ]
+        while [ $totalHr -le $maximumHr -a $day -le $daysPerMonth ]
         do
                 random=$((RANDOM%3))
                 case $random in
@@ -29,9 +29,11 @@ calDailyAndTotalWage()
                 totalHr=$(( $totalHr + $empHr ))
 		salary=$(( $perHrWage * $empHr ))
 		totalSalary=$(( $totalSalary + $salary ))
-		arrayForWage=( $salary $totalSalary )
-		echo "Daily wages along with total wages " ${arrayForWage[@]}
-                ((++days))
+		arrayForWage[$day]="$salary $totalSalary"
+		echo "Wage day $day is " $salary
+		arrayForWage[totalSalary]="$totalSalary"
+		echo "Day $day wages along with total wages " ${arrayForWage[$day]}
+                ((++day))
         done
 }
 
